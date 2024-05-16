@@ -18,7 +18,7 @@
     {% block extra_css %}
     {% endblock %}
 
-    <title>Guilty Sheep {% extra_title %}{% endblock %}</title>
+    <title>Guilty Sheep {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
     <h1>Hello, world!</h1>
@@ -27,13 +27,13 @@
         <div class="message-container"></div>
     {% endif %}
 
+    {% block page_header %}
+    {% endblock %}
+
     {% block content %}
     {% endblock %}
 
-    {% block extra %}
-    {% endblock %}
-
-    {% block ultra %}
+    {% block postloadjs %}
     {% endblock %}
 
     {% block js %}
