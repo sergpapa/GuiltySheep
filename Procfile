@@ -1,1 +1,1 @@
-web: guilty_sheep.wsgi:application
+web: gunicorn guilty_sheep.wsgi:application
