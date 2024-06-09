@@ -1,0 +1,495 @@
+[
+    [
+        {
+            "pk": 1, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340190",
+                "name": "Wanted Hoodie", 
+                "description": "Cozy hoodie made from soft, high-quality fabric with a vibrant print.",
+                "price": 45.99, 
+                "category": "hoodies", 
+                "collection": "reclaim",
+                "rating": 4.7,  
+                "image": "wanted_hoodie.jpg"
+            }
+        },
+        {
+            "pk": 2, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340156",
+                "name": "Enchanted Forest B&W T-Shirt", 
+                "description": "High-quality cotton t-shirt with a comfortable fit and durable print.",
+                "price": 25.99, 
+                "category": "t-shirts", 
+                "collection": "guilty-monsters",
+                "rating": 4.8,  
+                "image": "enchated_forest_b&w_tshirt.jpg"
+            }
+        },
+        {
+            "pk": 3, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340157",
+                "name": "Enchanted Forest T-Shirt", 
+                "description": "High-quality cotton t-shirt with a comfortable fit and durable print.",
+                "price": 25.99, 
+                "category": "t-shirts", 
+                "collection": "guilty-monsters",
+                "rating": 4.7,  
+                "image": "enchated_forest_tshirt.jpg"
+            }
+        },
+        {
+            "pk": 4, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340158",
+                "name": "Graffiti Sheep T-Shirt", 
+                "description": "High-quality cotton t-shirt with a comfortable fit and durable print.",
+                "price": 25.99, 
+                "category": "t-shirts", 
+                "collection": "street-spirit",
+                "rating": 4.5,  
+                "image": "graffity_sheep_tshirt.jpg"
+            }
+        },
+        {
+            "pk": 5, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340159",
+                "name": "Guilty Black Short Sleeve Shirt", 
+                "description": "Premium fabric short sleeve shirt with excellent breathability and style.",
+                "price": 29.99, 
+                "category": "shirts", 
+                "collection": "classics",
+                "rating": 4.6,  
+                "image": "guilty_black_shortsleeve_shirt.jpg"
+            }
+        },
+        {
+            "pk": 6, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340160",
+                "name": "Guilty Dream Neon Green Hoodie", 
+                "description": "Cozy hoodie made from soft, high-quality fabric with a vibrant print.",
+                "price": 45.99, 
+                "category": "hoodies", 
+                "collection": "classics",
+                "rating": 4.7,  
+                "image": "guilty_dream_neon_green_hoodie.jpg"
+            }
+        },
+        {
+            "pk": 7, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340161",
+                "name": "Guilty Dream Neon Orange Hoodie", 
+                "description": "Cozy hoodie made from soft, high-quality fabric with a vibrant print.",
+                "price": 45.99, 
+                "category": "hoodies", 
+                "collection": "classics",
+                "rating": 4.7,  
+                "image": "guilty_dream_neon_orange_hoodie.jpg"
+            }
+        },
+        {
+            "pk": 8, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340162",
+                "name": "Guilty Dream Neon Pink Hoodie", 
+                "description": "Cozy hoodie made from soft, high-quality fabric with a vibrant print.",
+                "price": 45.99, 
+                "category": "hoodies", 
+                "collection": "classics",
+                "rating": 4.7,  
+                "image": "guilty_dream_neon_pink_hoodie.jpg"
+            }
+        },
+        {
+            "pk": 9, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340163",
+                "name": "Guilty Hoodie Classic Black", 
+                "description": "Classic black hoodie made from premium materials for maximum comfort.",
+                "price": 45.99, 
+                "category": "hoodies", 
+                "collection": "classics",
+                "rating": 4.8,  
+                "image": "guilty_hoodie_classic_black.jpg"
+            }
+        },
+        {
+            "pk": 10, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340164",
+                "name": "Guilty Jacket Black", 
+                "description": "Stylish and durable jacket made from high-quality materials.",
+                "price": 55.99, 
+                "category": "jackets", 
+                "collection": "classics",
+                "rating": 4.7,  
+                "image": "guilty_jacket_black.jpg"
+            }
+        },
+        {
+            "pk": 11, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340165",
+                "name": "Guilty Jacket Ciel", 
+                "description": "Stylish and durable jacket made from high-quality materials.",
+                "price": 55.99, 
+                "category": "jackets", 
+                "collection": "classics",
+                "rating": 4.7,  
+                "image": "guilty_jacket_ciel.jpg"
+            }
+        },
+        {
+            "pk": 12, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340166",
+                "name": "Guilty Jacket Green", 
+                "description": "Stylish and durable jacket made from high-quality materials.",
+                "price": 55.99, 
+                "category": "jackets", 
+                "collection": "classics",
+                "rating": 4.7,  
+                "image": "guilty_jacket_green.jpg"
+            }
+        },
+        {
+            "pk": 13, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340167",
+                "name": "Guilty Jacket Pink", 
+                "description": "Stylish and durable jacket made from high-quality materials.",
+                "price": 55.99, 
+                "category": "jackets", 
+                "collection": "classics",
+                "rating": 4.7,  
+                "image": "guilty_jacket_pink.jpg"
+            }
+        },
+        {
+            "pk": 14, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340168",
+                "name": "Guilty Jacket White", 
+                "description": "Stylish and durable jacket made from high-quality materials.",
+                "price": 55.99, 
+                "category": "jackets", 
+                "collection": "classics",
+                "rating": 4.7,  
+                "image": "guilty_jacket_white.jpg"
+            }
+        },
+        {
+            "pk": 15, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340169",
+                "name": "Guilty Nightmare T-Shirt", 
+                "description": "High-quality cotton t-shirt with a comfortable fit and durable print.",
+                "price": 25.99, 
+                "category": "t-shirts", 
+                "collection": "guilty-monsters",
+                "rating": 4.6,  
+                "image": "guilty_nightmare_tshirt.jpg"
+            }
+        },
+        {
+            "pk": 16, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340170",
+                "name": "Guilty Science Hoodie White", 
+                "description": "Cozy hoodie made from soft, high-quality fabric with a vibrant print.",
+                "price": 45.99, 
+                "category": "hoodies", 
+                "collection": "guilty-scientist",
+                "rating": 4.7,  
+                "image": "guilty_science_hoodie_white.jpg"
+            }
+        },
+        {
+            "pk": 17, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340171",
+                "name": "Guilty Scientist Hoodie Black", 
+                "description": "Cozy hoodie made from soft, high-quality fabric with a vibrant print.",
+                "price": 45.99, 
+                "category": "hoodies", 
+                "collection": "guilty-scientist",
+                "rating": 4.7,  
+                "image": "guilty_scientist_hoodie_black.jpg"
+            }
+        },
+        {
+            "pk": 18, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340172",
+                "name": "Guilty Scientist T-Shirt Black", 
+                "description": "High-quality cotton t-shirt with a comfortable fit and durable print.",
+                "price": 25.99, 
+                "category": "t-shirts", 
+                "collection": "guilty-scientist",
+                "rating": 4.6,  
+                "image": "guilty_scientist_tshirt_black.jpg"
+            }
+        },
+        {
+            "pk": 19, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340173",
+                "name": "Guilty Scientist T-Shirt White", 
+                "description": "High-quality cotton t-shirt with a comfortable fit and durable print.",
+                "price": 25.99, 
+                "category": "t-shirts", 
+                "collection": "guilty-scientist",
+                "rating": 4.6,  
+                "image": "guilty_scientist_tshirt_white.jpg"
+            }
+        },
+        {
+            "pk": 20, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340174",
+                "name": "Guilty Shirt Classic Black", 
+                "description": "Premium fabric shirt with excellent breathability and style.",
+                "price": 29.99, 
+                "category": "shirts", 
+                "collection": "classics",
+                "rating": 4.6,  
+                "image": "guilty_shirt_classic_black.jpg"
+            }
+        },
+        {
+            "pk": 21, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340175",
+                "name": "Guilty Shirt Classic White", 
+                "description": "Premium fabric shirt with excellent breathability and style.",
+                "price": 29.99, 
+                "category": "shirts", 
+                "collection": "classics",
+                "rating": 4.6,  
+                "image": "guilty_shirt_classic_white.jpg"
+            }
+        },
+        {
+            "pk": 22, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340176",
+                "name": "Guilty Twill Shirt", 
+                "description": "Premium fabric shirt with excellent breathability and style.",
+                "price": 32.99, 
+                "category": "shirts", 
+                "collection": "classics",
+                "rating": 4.6,  
+                "image": "guilty_twill_shirt.jpg"
+            }
+        },
+        {
+            "pk": 23, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340177",
+                "name": "Hokusai Wave Hoodie", 
+                "description": "Cozy hoodie made from soft, high-quality fabric with a vibrant print.",
+                "price": 45.99, 
+                "category": "hoodies", 
+                "collection": "reclaim",
+                "rating": 4.8,  
+                "image": "hokusai_wave_hoodie.jpg"
+            }
+        },
+        {
+            "pk": 24, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340178",
+                "name": "Hunter Hoodie", 
+                "description": "Cozy hoodie made from soft, high-quality fabric with a vibrant print.",
+                "price": 45.99, 
+                "category": "hoodies", 
+                "collection": "reclaim",
+                "rating": 4.7,  
+                "image": "hunter_hoodie.jpg"
+            }
+        },
+        {
+            "pk": 25, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340179",
+                "name": "Join the Herd Hoodie", 
+                "description": "Cozy hoodie made from soft, high-quality fabric with a vibrant print.",
+                "price": 45.99, 
+                "category": "hoodies", 
+                "collection": "street-spirit",
+                "rating": 4.7,  
+                "image": "join_the_herd_hoodie.jpg"
+            }
+        },
+        {
+            "pk": 26, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340180",
+                "name": "Leviathan B&W T-Shirt", 
+                "description": "High-quality cotton t-shirt with a comfortable fit and durable print.",
+                "price": 25.99, 
+                "category": "t-shirts", 
+                "collection": "guilty-monsters",
+                "rating": 4.7,  
+                "image": "leviathan_b&w_tshirt.jpg"
+            }
+        },
+        {
+            "pk": 27, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340181",
+                "name": "Pretend Hoodie", 
+                "description": "Cozy hoodie made from soft, high-quality fabric with a vibrant print.",
+                "price": 45.99, 
+                "category": "hoodies", 
+                "collection": "guilty-monsters",
+                "rating": 4.7,  
+                "image": "pretend_hoodie.jpg"
+            }
+        },
+        {
+            "pk": 28, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340182",
+                "name": "Pretend T-Shirt", 
+                "description": "High-quality cotton t-shirt with a comfortable fit and durable print.",
+                "price": 25.99, 
+                "category": "t-shirts", 
+                "collection": "guilty-monsters",
+                "rating": 4.7,  
+                "image": "pretend_tshirt.jpg"
+            }
+        },
+        {
+            "pk": 29, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340183",
+                "name": "Reclaim Hoodie", 
+                "description": "Cozy hoodie made from soft, high-quality fabric with a vibrant print.",
+                "price": 45.99, 
+                "category": "hoodies", 
+                "collection": "reclaim",
+                "rating": 4.7,  
+                "image": "reclaim_hoodie.jpg"
+            }
+        },
+        {
+            "pk": 30, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340184",
+                "name": "Samurai Hoodie", 
+                "description": "Cozy hoodie made from soft, high-quality fabric with a vibrant print.",
+                "price": 45.99, 
+                "category": "hoodies", 
+                "collection": "reclaim",
+                "rating": 4.8,  
+                "image": "samurai_hoodie.jpg"
+            }
+        },
+        {
+            "pk": 31, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340185",
+                "name": "Sheep Hill Hoodie", 
+                "description": "Cozy hoodie made from soft, high-quality fabric with a vibrant print.",
+                "price": 45.99, 
+                "category": "hoodies", 
+                "collection": "street-spirit",
+                "rating": 4.7,  
+                "image": "sheep_hill_hoodie.jpg"
+            }
+        },
+        {
+            "pk": 32, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340186",
+                "name": "Street Spirit T-Shirt", 
+                "description": "High-quality cotton t-shirt with a comfortable fit and durable print.",
+                "price": 25.99, 
+                "category": "t-shirts", 
+                "collection": "street-spirit",
+                "rating": 4.7,  
+                "image": "street_spirit_tshirt.jpg"
+            }
+        },
+        {
+            "pk": 33, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340187",
+                "name": "The Mule T-Shirt", 
+                "description": "High-quality cotton t-shirt with a comfortable fit and durable print.",
+                "price": 25.99, 
+                "category": "t-shirts", 
+                "collection": "guilty-monsters",
+                "rating": 4.7,  
+                "image": "the_mule_tshirt.jpg"
+            }
+        },
+        {
+            "pk": 34, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340188",
+                "name": "The Mule T-Shirt B&W", 
+                "description": "High-quality cotton t-shirt with a comfortable fit and durable print.",
+                "price": 25.99, 
+                "category": "t-shirts", 
+                "collection": "guilty-monsters",
+                "rating": 4.7,  
+                "image": "the_mule_tshirt_b&w.jpg"
+            }
+        },
+        {
+            "pk": 35, 
+            "model": "products.product", 
+            "fields": {
+                "sku": "pp5001340189",
+                "name": "The Victim Hoodie", 
+                "description": "Cozy hoodie made from soft, high-quality fabric with a vibrant print.",
+                "price": 45.99, 
+                "category": "hoodies", 
+                "collection": "guilty-scientist",
+                "rating": 4.7,  
+                "image": "the_victim_hoodie.jpg"
+            }
+        }
+    ]
+    
+]

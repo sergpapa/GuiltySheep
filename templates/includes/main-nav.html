@@ -14,14 +14,27 @@
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link text-black mr-5 text-uppercase" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categories
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                <a href="{% url 'products' %}?category=t-shirts" class="dropdown-item">T-shirts</a>
+                <a href="{% url 'products' %}?category=hoodies" class="dropdown-item">Hoodies</a>
+                <a href="{% url 'products' %}?category=shirts" class="dropdown-item">Shirts</a>
+                <a href="{% url 'products' %}?category=jackets" class="dropdown-item">Jackets</a>
+                <a href="{% url 'products' %}?category=t-shirts,hoodies,shirts,jackets" class="dropdown-item">All Clothing</a>
+            </div>
+        </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5 text-uppercase" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Collections
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="{% url 'products' %}?category=classic" class="dropdown-item">Classic</a>
-                <a href="{% url 'products' %}?category=guilty-scientist" class="dropdown-item">Guilty Scientist</a>
-                <a href="{% url 'products' %}?category=reclaim" class="dropdown-item">Reclaim</a>
-                <a href="{% url 'products' %}?category=guilty-monsters" class="dropdown-item">Guilty Monsters</a>
-                <a href="{% url 'products' %}?category=classic,guilty-scientist,reclaim,guilty-monster" class="dropdown-item">All Collections</a>
+                <a href="{% url 'products' %}?collection=classics" class="dropdown-item">Classic</a>
+                <a href="{% url 'products' %}?collection=guilty-scientist" class="dropdown-item">Guilty Scientist</a>
+                <a href="{% url 'products' %}?collection=reclaim" class="dropdown-item">Reclaim</a>
+                <a href="{% url 'products' %}?collection=guilty-monsters" class="dropdown-item">Guilty Monsters</a>
+                <a href="{% url 'products' %}?collection=classics,guilty-scientist,reclaim,guilty-monster" class="dropdown-item">All Collections</a>
             </div>
         </li>
 

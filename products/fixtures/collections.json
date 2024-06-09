@@ -1,0 +1,29 @@
+[
+    {
+        "pk": 1, 
+        "model": "products.collection", 
+        "fields": {"name": "classics", 
+        "friendly_name": "Classics"
+    }}, 
+    {
+        "pk": 2, 
+        "model": "products.collection", 
+        "fields": 
+            {"name": "reclaim", 
+            "friendly_name": "Reclaim"}
+            },
+    {
+        "pk": 3, 
+        "model": "products.collection", 
+        "fields": 
+            {"name": "guilty-scientist", 
+            "friendly_name": "Guilty Scientist"}
+            },
+    {
+        "pk": 3, 
+        "model": "products.collection", 
+        "fields": 
+            {"name": "guilty-monsters", 
+            "friendly_name": "Guilty Monsters"}
+            }
+        ]
