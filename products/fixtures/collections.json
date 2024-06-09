@@ -20,10 +20,17 @@
             "friendly_name": "Guilty Scientist"}
             },
     {
-        "pk": 3, 
+        "pk": 4, 
         "model": "products.collection", 
         "fields": 
             {"name": "guilty-monsters", 
             "friendly_name": "Guilty Monsters"}
+            },
+    {
+        "pk": 5, 
+        "model": "products.collection", 
+        "fields": 
+            {"name": "street-spirit", 
+            "friendly_name": "Street Spirit"}
             }
         ]

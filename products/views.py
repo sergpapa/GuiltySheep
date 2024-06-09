@@ -4,3 +4,6 @@ from django.shortcuts import render
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
     return render(request, 'products/products.html')
+
+def add_product(request):
+    pass

@@ -32,21 +32,10 @@
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
                 <a href="{% url 'products' %}?collection=classics" class="dropdown-item">Classic</a>
                 <a href="{% url 'products' %}?collection=guilty-scientist" class="dropdown-item">Guilty Scientist</a>
+                <a href="{% url 'products' %}?collection=street-spirit" class="dropdown-item">Guilty Scientist</a>
                 <a href="{% url 'products' %}?collection=reclaim" class="dropdown-item">Reclaim</a>
                 <a href="{% url 'products' %}?collection=guilty-monsters" class="dropdown-item">Guilty Monsters</a>
-                <a href="{% url 'products' %}?collection=classics,guilty-scientist,reclaim,guilty-monster" class="dropdown-item">All Collections</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black text-uppercase" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Offers
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
-                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
-                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
-                <a href="{% url 'products' %}?category=new_arrivals,deals,clearance"class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?collection=classics,guilty-scientist,reclaim,guilty-monsters,strit-spirit" class="dropdown-item">All Collections</a>
             </div>
         </li>
     </ul>
