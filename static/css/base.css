@@ -2,6 +2,10 @@ html {
     height: 100%;
 }
 
+body {
+    font-family: "Lato", sans-serif;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -9,6 +13,10 @@ html {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+}
+
+.main-logo-link {
+    width: fit-content;
 }
 
 .shop-now-btn {
@@ -20,11 +28,49 @@ html {
     height: auto;
 }
 
+.btn-search {
+    background: #222;
+    color: #fff;
+}
+
+.btn-search:hover,
+.btn-search:active,
+.btn-search:focus {
+    background: #fff;
+    color: #222;
+}
+
+.text-black {
+    color: #222 !important;
+}
+
+.border-black {
+    border: 1px solid #222 !important;
+}
+
+.bg-black {
+    background: #222 !important;
+}
+
+.shop-now-btn:hover,
+.shop-now-btn:active,
+.shop-now-btn:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #fff;
+    color: #222!important;
+}
+
 #hero-img{
     background: url('/media/hero-img.png') no-repeat fixed;
-    background-position: center 80px;
+    background-position: center 90px;
     background-size: cover;
-    height: calc(100vh - 149px);
+    height: calc(90vh - 225px);
+}
+
+.hero-text-padding {
+    padding-top: 16rem;
 }
 
 /* fixed top navbar only on medium and up */
@@ -38,6 +84,19 @@ html {
     }
 
     .header-container {
-        padding-top: 149px;
+        padding-top: 225px;
+    }
+
+}
+
+@media (max-width: 991px) {
+    #hero-img{
+        height: calc(115vh - 225px);
+    }
+}
+
+@media (max-width: 322px) {
+    .list-inline-item {
+        margin-right: 0px!important;
     }
 }
