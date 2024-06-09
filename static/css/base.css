@@ -1,0 +1,43 @@
+html {
+    height: 100%;
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.shop-now-btn {
+    border: 1px solid #fff;
+}
+
+.logo-img {
+    width: 125px;
+    height: auto;
+}
+
+#hero-img{
+    background: url('/media/hero-img.png') no-repeat fixed;
+    background-position: center 80px;
+    background-size: cover;
+    height: calc(100vh - 149px);
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 149px;
+    }
+}

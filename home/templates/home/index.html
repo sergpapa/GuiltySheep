@@ -1,6 +1,34 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header%}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-<h1>it works</h1>
+    <div id="hero-img" class="container-fluid d-flex justify-content-center align-items-center">
+        <div class="container h-30 d-flex justify-content-center align-items-center">
+            <div class="row h-100">
+                <div class="col-12 text-center">
+                    <h1 class="display-4 logo-font text-white">
+                        GUILTY SHEEP
+                    </h1>
+                </div>
+                <div class="col-8 offset-2 text-center">
+                    <p class="text-white">
+                        Even the mightiest of the wolves treble at the thought of the Sheep, for they know that should the Sheep awake, their days of dominace are numbered
+                    </p>
+                </div>
+                <div class="col-12 text-center">
+                    <a href="" class="shop-now-btn btn btn-large rounded-0 text-uppercase text-white border my-5">
+                        Shop now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
