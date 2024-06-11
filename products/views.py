@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category, Collection
+from .models import Product, Category, Collection, Artist
 
 # Create your views here.
 def all_products(request):
@@ -13,6 +13,8 @@ def all_products(request):
     products = Product.objects.all()
     query = None
     categories = None
+    collections = None
+    artists = None
     sort = None
     direction = None
 
@@ -35,6 +37,18 @@ def all_products(request):
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+        if 'collection' in request.GET:
+            collections = request.GET['collection'].split(',')
+            products = products.filter(collection__name__in=collections)
+            collections = Collection.objects.filter(name__in=collections)
+        if 'artist' in request.GET:
+            artists = request.GET['artist'].split(',')
+            collection_lst = Collection.objects.filter(artist__name__in=artists)
+            collections = []
+            for collection in collection_lst:
+                collections.append(collection.name)
+            products = products.filter(collection__name__in=collections)
+            artists = Artist.objects.filter(name__in=artists)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -51,10 +65,15 @@ def all_products(request):
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        'current_collections' : collections,
+        'current_artists' : artists,
         'current_sorting': current_sorting,
     }
 
     return render(request, 'products/products.html', context)
 
 def add_product(request):
+    pass
+
+def product_detail(request):
     pass
