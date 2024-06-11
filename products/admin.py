@@ -1,6 +1,6 @@
 
 from django.contrib import admin
-from .models import Product, Category, Collection
+from .models import Product, Category, Collection, Artist
 
 # Register your models here.
 
@@ -22,6 +22,12 @@ class CategoryAdmin(admin.ModelAdmin):
         "name"
     )
 
+class ArtistAdmin(admin.ModelAdmin):
+    list_display = (
+        "friendly_name",
+        "name"
+    )
+
 class CollectionAdmin(admin.ModelAdmin):
     list_display = (
         "friendly_name",
@@ -31,3 +37,4 @@ class CollectionAdmin(admin.ModelAdmin):
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Collection, CollectionAdmin)
+admin.site.register(Artist, ArtistAdmin)

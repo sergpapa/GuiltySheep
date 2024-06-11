@@ -3,34 +3,44 @@
         "pk": 1, 
         "model": "products.collection", 
         "fields": {"name": "classics", 
-        "friendly_name": "Classics"
+            "friendly_name": "Classics",
+            "artist": 1,
+            "image": "classics_poster.jpg"
     }}, 
     {
         "pk": 2, 
         "model": "products.collection", 
         "fields": 
             {"name": "reclaim", 
-            "friendly_name": "Reclaim"}
+            "friendly_name": "Reclaim",
+            "artist": 3,
+            "image": "reclaim_poster.jpg"}
             },
     {
         "pk": 3, 
         "model": "products.collection", 
         "fields": 
             {"name": "guilty-scientist", 
-            "friendly_name": "Guilty Scientist"}
+            "friendly_name": "Guilty Scientist",
+            "artist": 2,
+            "image": "mad_scientist.jpg"}
             },
     {
         "pk": 4, 
         "model": "products.collection", 
         "fields": 
             {"name": "guilty-monsters", 
-            "friendly_name": "Guilty Monsters"}
+            "friendly_name": "Guilty Monsters",
+            "artist" : 1,
+            "image": "monsters_poster.jpg"}
             },
     {
         "pk": 5, 
         "model": "products.collection", 
         "fields": 
             {"name": "street-spirit", 
-            "friendly_name": "Street Spirit"}
+            "friendly_name": "Street Spirit",
+            "artist" : 1,
+            "image": "street_spirit.jpg"}
             }
         ]

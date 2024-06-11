@@ -1,0 +1,20 @@
+[
+    {
+        "pk": 1, 
+        "model": "products.artist", 
+        "fields": {"name": "sergios", 
+            "friendly_name": "Sergios"
+    }},
+    {
+        "pk": 2, 
+        "model": "products.artist", 
+        "fields": {"name": "dave", 
+         "friendly_name": "Dave"
+    }},
+    {
+        "pk": 3, 
+        "model": "products.artist", 
+        "fields": {"name": "anna", 
+            "friendly_name": "Anna"
+    }}
+]

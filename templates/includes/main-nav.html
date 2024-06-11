@@ -38,5 +38,17 @@
                 <a href="{% url 'products' %}?collection=classics,guilty-scientist,reclaim,guilty-monsters,strit-spirit" class="dropdown-item">All Collections</a>
             </div>
         </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5 text-uppercase" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Artists
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+                <a href="{% url 'products' %}?artist=t-sergios" class="dropdown-item">Sergios</a>
+                <a href="{% url 'products' %}?artist=dave" class="dropdown-item">Dave</a>
+                <a href="{% url 'products' %}?artist=anna" class="dropdown-item">Anna</a>
+                <a href="{% url 'products' %}?artist=sergios,dave,anna" class="dropdown-item">All Artists</a>
+            </div>
+        </li>
     </ul>
 </div>
