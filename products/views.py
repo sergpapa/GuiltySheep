@@ -25,6 +25,18 @@ def all_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
+            if sortkey == 'artist':
+                collections = []
+                sortkey = 'lower_collection_name'
+                artists = Artist.objects.all()
+                collection_lst = Collection.objects.filter(artist__name__in=artists)
+                for collection in collection_lst:
+                    collections.append(collection.name)
+                products = products.annotate(lower_collection_name=Lower('collection__name'))
+            elif sortkey == 'collection':
+                sortkey = 'lower_collection_name'
+                products = products.annotate(lower_collection_name=Lower('collection__name'))
+
             if sortkey == 'category':
                 sortkey = 'category__name'
             if 'direction' in request.GET:
@@ -72,8 +84,33 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
+
+def product_detail(request, product_id):
+    """ A view to show individual product details """
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    context = {
+        'product': product,
+    }
+
+    return render(request, 'products/product_detail.html', context)
+
+
 def add_product(request):
     pass
 
-def product_detail(request):
+def edit_product(request):
     pass
+
+
+def delete_product(request, product_id):
+    """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, 'Product deleted!')
+    return redirect(reverse('products'))
