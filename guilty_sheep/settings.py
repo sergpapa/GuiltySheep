@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-7@@5p$+jitb(4%%^1ib6w*9__)c5g#yyi3wz!uq560mb)ezz29
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True   # 'DEVEOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'guilty-sheep-d1a7abf9637c.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'guilty-sheep-d1a7abf9637c.herokuapp.com', '8000-sergpapa-guiltysheep-sosniuw64ee.ws.codeinstitute-ide.net']
 
 
 # Application definition
@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'home',
     'products',
+    'bag',
     # other
     'storages',
 ]
@@ -57,7 +58,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # "allauth.account.middleware.AccountMiddleware",
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = 'guilty_sheep.urls'
@@ -77,6 +78,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
+                'bag.contexts.bag_contents',
             ],
         },
     },
