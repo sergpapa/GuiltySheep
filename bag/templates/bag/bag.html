@@ -45,7 +45,7 @@
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                        <p class="my-0"><strong>Size: </strong>{{ item.sizes }}</p>
+                                        <p class="my-0"><strong>Size: </strong>{{ item.size|upper}}</p>
                                         <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                     </td>
                                     <td class="py-3">
@@ -76,9 +76,7 @@
                                                             </span>
                                                         </button>
                                                     </div>
-                                                    {% if item.product.has_sizes %}
-                                                        <input type="hidden" name="product_size" value="{{ item.size }}">
-                                                    {% endif %}
+                                                    <input type="hidden" name="product_size" value="{{ item.size }}">
                                                 </div>
                                             </div>
                                         </form>
