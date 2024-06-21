@@ -19,7 +19,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -27,13 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-7@@5p$+jitb(4%%^1ib6w*9__)c5g#yyi3wz!uq560mb)ezz29'  # need to change with env variable when deloyed os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True   # 'DEVEOPMENT' in os.environ
+DEBUG = True # 'DEVEOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'guilty-sheep-d1a7abf9637c.herokuapp.com', '8000-sergpapa-guiltysheep-sosniuw64ee.ws.codeinstitute-ide.net']
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
