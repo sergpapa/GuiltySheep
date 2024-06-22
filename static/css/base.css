@@ -44,6 +44,11 @@ body {
     color: #222 !important;
 }
 
+.text-red {
+    color: #e83e8c !important;
+}
+
+
 .border-black {
     border: 1px solid #222 !important;
 }
@@ -205,13 +210,32 @@ body {
 }
 
 @media (max-width: 991px) {
-    #hero-img{
-        height: calc(115vh - 225px);
+
+    .header-container {
+        padding-top: 209px;
+    }
+
+    .nav-link{
+        padding: .5rem;
+    }
+
+    .logo-img{
+        width: 85px;
     }
 }
 
-@media (max-width: 322px) {
+@media (max-width: 332px) {
+
+    .header-container {
+        padding-top: 238px;
+    }
+
+    
     .list-inline-item {
         margin-right: 0px!important;
+    }
+
+    .fa-lg{
+        font-size: 1rem;
     }
 }

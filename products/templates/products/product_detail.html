@@ -28,7 +28,24 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.name }}</p>
+                    <p class="mb-0">
+                        <div class="container-fluid px-0">
+                            <div class="row">
+                                <div class="col-4 pr-0">{{ product.name }}</div>
+                                <div class="col-6 px-0">
+                                    <a href="{% url 'add_to_wishlist' product.id %}" 
+                                        class="text-black wishlist-btn" title="Add to wishlist">
+                                    <i class="fas fa-heart fa-lg
+                                        {% for entry in wishlist %}
+                                            {% if entry.item_id == product.id|stringformat:'s' %}
+                                                text-red 
+                                            {% endif %}
+                                        {% endfor %}"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                     {% if product.category %}
                     <p class="small mt-1 mb-0">
@@ -127,4 +144,11 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+<script type="text/javascript">
+    $(".wishlist-btn").on('click', function(e) {
+        //e.preventDefault();
+        $(this).toggleClass("text-red");
+    });
+
+</script>
 {% endblock %}

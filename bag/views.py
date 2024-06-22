@@ -20,6 +20,7 @@ def add_to_bag(request, item_id):
     size = request.POST['product_size']
     bag = request.session.get('bag', {})
 
+    print('bag : ', request.POST)
     if item_id in list(bag.keys()):
         if size in bag[item_id]['items_by_size'].keys():
             bag[item_id]['items_by_size'][size] += quantity
