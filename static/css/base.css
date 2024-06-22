@@ -60,7 +60,7 @@ body {
     width: 58px;
 }
 
-.card-img-top {
+.collection-card .card-img-top {
     max-height: 288px;
 }
 

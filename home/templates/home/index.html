@@ -40,7 +40,7 @@
         <div class="row h-100 align-items-center">
             {% for collection in collections %}
                 <div class="col-4 align-items-center">
-                    <div class="card shadow mx-auto my-2 border-0 rounded-2" style="width: 18rem;">
+                    <div class="collection-card shadow mx-auto my-2 border-0 rounded-2" style="width: 18rem;">
                         <a href="{% url 'products' %}?collection={{ collection.name }}">
                             <img class="card-img-top image-fluid" src="{{ MEDIA_URL }}{{ collection.image }}" alt="Card image cap">
                             <div class="card-body bg-black">
