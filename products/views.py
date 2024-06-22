@@ -1,11 +1,14 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.core import serializers
+import json
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category, Collection, Artist
-from .forms import ProductForm
+from .models import Product, Category, Collection, Artist, Review
+from django.contrib.auth.models import User
+from .forms import ProductForm, ReviewForm
 
 # Create your views here.
 def all_products(request):
@@ -90,9 +93,18 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    data = Review.objects.filter(product=product)
+    reviews_json = serializers.serialize('json', data)
+    
+    reviews = json.loads(reviews_json)
+
+    for review in reviews:
+        user =  User.objects.filter(pk=review['fields']['user']).first()
+        review['fields']['user'] = user.username
 
     context = {
         'product': product,
+        'reviews' : reviews
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -132,6 +144,7 @@ def edit_product(request, product_id):
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
+    
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
@@ -144,13 +157,13 @@ def edit_product(request, product_id):
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
 
-    template = 'products/edit_product.html'
-    context = {
-        'form': form,
-        'product': product,
-    }
+        template = 'products/edit_product.html'
+        context = {
+            'form': form,
+            'product': product,
+        }
 
-    return render(request, template, context)
+        return render(request, template, context)
 
 
 @login_required
@@ -164,3 +177,65 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+
+@login_required
+def add_review(request, product_id):
+
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = request.user  
+            review.product = product
+            review.save()
+            messages.success(request, f'Review for {product.name} added successfully!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to add review. Please ensure the form is valid.')
+    else:
+        form = ReviewForm()
+    
+
+    template = 'products/add_review.html'
+    context = {
+        'form': form,
+        'product': product,
+        'on_review_page' : True
+    }
+
+    return render(request, template, context)
+    
+
+@login_required
+def edit_review(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    
+    if  request.user.is_superuser:
+
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+    else:
+        product.delete()
+
+        messages.success(request, 'Product deleted!')
+        return redirect(reverse('products'))
+
+
+@login_required
+def delete_review(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    
+    if  request.user.is_superuser:
+
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+    else:
+        product.delete()
+
+        messages.success(request, 'Product deleted!')
+        return redirect(reverse('products'))
