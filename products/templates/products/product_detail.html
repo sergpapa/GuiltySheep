@@ -144,7 +144,7 @@
             <div class="col-12 col-md-8 offset-md-2">
                 <h3>Product Reviews</h3>
                 {% if reviews %}
-                <table class="table">
+                <table class="table table-responsive">
                     <thead>
                       <tr>
                         <th scope="col">Title</th>
@@ -152,17 +152,26 @@
                         <th scope="col">User</th>
                         <th scope="col">Date</th>
                         <th  class="d-none d-sm-block" scope="col">Review</th>
+                        <th scope="col"></th>
                       </tr>
                     </thead>
                     <tbody>
                     
                         {% for review in reviews %}
                         <tr>
-                            <th scope="row"> <a class="text-black" href="{% url 'products' %}">{{ review.fields.review_title }}</a></th>
+                            <th scope="row">{{ review.fields.review_title }}</th>
                             <td><small>{{ review.fields.rating }} / 5</small></td>
                             <td>{{ review.fields.user }}</td>
                             <td>{{ review.fields.review_date }}</td>
                             <td class="d-none d-sm-block">{{ review.fields.review_body }}</td>
+                            {% if request.user.username == review.fields.user or request.user.is_superuser %}
+                            <td>
+                                <p><a class="btn btn-sm bg-black text-white rounded-0 text-center review-btn" href="{% url 'edit_review' review.pk %}">Edit</a></p>   
+                            </td>
+                            <td>
+                                <p><a class="btn btn-sm btn-danger rounded-0 review-btn" href="{% url 'delete_review' review.pk %}">Delete</a></p>
+                            </td>
+                            {% endif %}
                         <tr>
                         {% endfor %}
                     </tbody>

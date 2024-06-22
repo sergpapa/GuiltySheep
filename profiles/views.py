@@ -1,7 +1,11 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
+from django.core import serializers
+from django.contrib.auth.models import User
+import json
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
+from products.models import Review
 from .forms import UserProfileForm
 
 from checkout.models import Order
@@ -21,12 +25,25 @@ def profile(request):
             messages.error(request, 'Update failed. Please ensure the form is valid.')
     else:
         form = UserProfileForm(instance=profile)
-    orders = profile.orders.all()
+        orders = profile.orders.all()
+
+        if  request.user.is_superuser:
+            data = Review.objects.all()
+        else:
+            data = Review.objects.filter(user=request.user)
+        reviews_json = serializers.serialize('json', data)
+        
+        reviews = json.loads(reviews_json)
+
+    for review in reviews:
+        user =  User.objects.filter(pk=review['fields']['user']).first()
+        review['fields']['user'] = user.username
 
     template = 'profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
+        'reviews' : reviews,
         'on_profile_page': True
     }
 

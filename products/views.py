@@ -212,30 +212,47 @@ def add_review(request, product_id):
     
 
 @login_required
-def edit_review(request, product_id):
-    product = get_object_or_404(Product, pk=product_id)
-    
-    if  request.user.is_superuser:
+def edit_review(request, review_id):
+    review = get_object_or_404(Review, pk=review_id)
+    product = get_object_or_404(Product, pk=review.product.id)
 
-        messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+    if request.method == 'POST':
+
+        if not request.user == review.user:
+            messages.error(request, 'Sorry, only store owners can do that.')
+            return redirect(reverse('product_detail'))
+
+        form = ReviewForm(request.POST, request.FILES, instance=review)
+
+        if form.is_valid():
+            review = form.save()
+            messages.success(request, f'Review for {product.name} updated successfully!')
+            return redirect(reverse('product_detail', args=[product.id]))
+        else:
+            messages.error(request, 'Failed to update review. Please ensure the form is valid.')
     else:
-        product.delete()
+        form = ReviewForm(instance=review)
+    
+    template = 'products/edit_review.html'
+    context = {
+        'form': form,
+        'product': product,
+        'review' : review,
+        'on_review_page' : True
+    }
 
-        messages.success(request, 'Product deleted!')
-        return redirect(reverse('products'))
+    return render(request, template, context)
 
 
 @login_required
-def delete_review(request, product_id):
-    product = get_object_or_404(Product, pk=product_id)
-    
-    if  request.user.is_superuser:
+def delete_review(request, review_id):
+    review = get_object_or_404(Review, pk=review_id)
 
+    if not request.user == review.user:
         messages.error(request, 'Sorry, only store owners can do that.')
-        return redirect(reverse('home'))
+        return redirect(reverse('product_detail'))
     else:
-        product.delete()
+        review.delete()
 
-        messages.success(request, 'Product deleted!')
-        return redirect(reverse('products'))
+        messages.success(request, 'Review deleted!')
+        return redirect(reverse('product_detail'))
