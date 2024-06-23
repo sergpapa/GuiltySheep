@@ -1,112 +1,119 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Guilty Sheep - Join the Heard**
 
-Welcome Sergios Papastergiou,
+## **Introduction**
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Guilty Sheep is a trendsetting e-commerce platform dedicated to offering unique, stylish products curated from various categories, collections, and artists. Guilty Sheep aims to provide a seamless shopping experience with user-friendly navigation, efficient purchasing options, and personalized user profiles.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **April 26, 2024**
+*Welcome to [Guilty Sheep](https://guilty-sheep-d1a7abf9637c.herokuapp.com)*
 
-## Gitpod Reminders
+![Guilty Sheep mockup](static/images/readme/guilty-sheep-mockup.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# **Contents**
 
-`python3 -m http.server`
+- [**Guilty Sheep - Join the Heard**](#guilty-sheep---your-trendy-e-commerce-haven)
+    - [**Introduction**](#introduction)
+- [**Contents**](#contents)
+- [**User Experience (UX)**](#user-experience-ux)
+    - [**User Stories**](#user-stories)
+    - [**Wireframes**](#wireframes)
+    - [**Site Structure**](#site-structure)
+  - [**Design**](#design)
+- [**Features**](#features)
+  - [**Existing features**](#existing-features)
+  - [**Technologies Used**](#technologies-used)
+- [**Testing**](#testing)
+- [**Deployment**](#deployment)
+- [**Credits**](#credits)
+- [**Acknowledgements**](#acknowledgements)
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+# **User Experience (UX)**
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+## **User Stories**
 
-A blue button should appear to click: _Make Public_,
+- **Viewing and Navigation:**
+    - As a user, I want to view a list of products, so I can browse through available items.
+    - As a user, I want to view a specific category, collection, or artist, so I can find products that suit my preferences.
+    - As a user, I want to view individual product details, so I can learn more about the item before purchasing.
+    - As a user, I want to view the total of my purchases at any time, so I can keep track of my spending.
+    
+- **Registration and User Access:**
+    - As a new user, I want to easily register, so I can create an account and start shopping.
+    - As a returning user, I want to log in or log out effortlessly, so I can access my account securely.
+    - As a user, I want to recover my password if forgotten, so I do not lose access to my account.
+    - As a user, I want to receive an email confirmation upon registration, so I know that my account has been successfully created.
+    - As a user, I want a personalized user profile, so I can view and manage my account details and purchase history.
 
-Another blue button should appear to click: _Open Browser_.
+- **Sorting and Searching:**
+    - As a user, I want to sort products by various criteria (e.g., price, popularity), so I can easily find what I am looking for.
+    - As a user, I want to filter products based on attributes (e.g., size, color), so I can narrow down my choices.
+    - As a user, I want to search for products by keywords, so I can quickly locate specific items.
+    
+- **Purchasing and Checkout:**
+    - As a user, I want to select a product, size, and quantity, so I can add the correct items to my cart.
+    - As a user, I want to view items in my shopping bag, so I can review my selections before checkout.
+    - As a user, I want to adjust the quantity or remove items from my shopping bag, so I can modify my purchase as needed.
+    - As a user, I want to enter my payment information securely, so I can complete my purchase.
+    - As a user, I want to see an order confirmation on the site and receive an email confirmation, so I know my order has been successfully placed.
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- **Reviewing Products:**
+    - As a user, I want to add a review for a product, so I can share my experience with other customers.
+    - As a user, I want to see a list of my reviews in my profile, so I can keep track of the products I have reviewed.
+    - As a user, I want to manage my reviews (edit or delete), so I can update or remove my feedback as necessary.
 
-To log into the Heroku toolbelt CLI:
+- **Admin and Moderation:**
+    - As an admin, I want to manage products (add, edit, delete), so I can keep the product listings up to date.
+    - As an admin, I want to manage reviews, so I can moderate content and ensure a positive user experience. 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+[Back to top](#contents)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
 
-------
+# **Deployment**
 
-## Release History
+### **Project Deployment Instructions**
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+This website is deployed on Heroku. Follow these steps to deploy the project:
 
-**April 26 2024:** Update node version to 16
+- **Local Setup**
 
-**September 20 2023:** Update Python version to 3.9.17.
+    - **Clone the Project:** 
+        - Log in to GitHub, navigate to the repository, and click on the "Code" button. Select "Open with GitHub Desktop" and follow the instructions to clone the repository locally.
+    - **Install Requirements:** 
+        - In your local workspace, open a terminal window and navigate to the project directory.
+        - Use the command `pip3 install -r requirements.txt` to install all necessary dependencies.
+    - **Set Up MongoDB:** 
+        - Sign up or log in to your MongoDB account. 
+        - Create a cluster and a database, then create the necessary collections: products, categories, users, orders, and reviews. 
+        - Populate these collections with the appropriate data according to the project's information architecture.
+    - **Create Environment Variables:**
+        - Create a `.gitignore` file in the project's root directory.
+        - Add `env.py` to the `.gitignore`.
+        - Create the `env.py` file and define the required environment variables using the `os` module.
+    - **Run the App:** 
+        - In your terminal window, run the command `python3 app.py` to start the application locally.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- **Heroku Deployment:** 
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+    - **Set Up Local Workspace for Heroku:**
+        - Generate `requirements.txt` by running `pip3 freeze --local > requirements.txt`.
+        - Create a `Procfile` specifying the entry point for Heroku using the command `echo web: python app.py > Procfile`.
+    
+    - **Set Up Heroku:**
+        - Create a Heroku account and a new app, selecting your preferred region.
+        - Choose the "GitHub" deployment method and connect your repository to Heroku.
+    
+    - **Configure Environment Variables:**
+        - In Heroku, navigate to the app's settings and find "Config Vars."
+        - Enter the variables from your `env.py` file: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `DATABASE_URL`, `EMAIL_HOST_PASS`, `EMAIL_HOST_USER`, `SECRET_KEY`, `STRIPE_PUBLIC_KEY`, `STRIPE_SECRET_KEY`, `STRIPE_WH_SECRET` and `USE_AWS`.
+    
+    - **Push Files to Repository:**
+        - Add and commit `requirements.txt` and `Procfile` to your Git repository.
+    
+    - **Automatic Deployment:**
+        - In the Heroku dashboard, go to the deploy tab and enable automatic deployments.
+        - Heroku will fetch the code from GitHub and deploy the app using the specified packages.
+        - Click "Open app" to access the live version.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+You can access the live link to the deployed version on Heroku - [https://guilty-sheep.herokuapp.com](https://guilty-sheep.herokuapp.com)
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+[Back to top](#contents)
