@@ -11,8 +11,8 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
-<div class="container mb-2">
+<div class="bg-styled p-4">
+    <div class="container-fluid bg-white rounded-lg p-4 mb-2">
     <div class="row">
         <div class="col">
             <hr>
@@ -57,7 +57,7 @@
                                                 {% if s %}
                                                 <div class="form-group form-inline col-12">
                                                     <label for="id_product_size" class="mr-5"><strong  class="mr-1">Size:</strong></label>
-                                                    <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size' onchange="updateHiddenInput()">
+                                                    <select class="form-control rounded w-50" name="product_size" id='id_product_size' onchange="updateHiddenInput()">
                                                         <option value="xs">{{ s.0 }}</option>
                                                         <option value="s">{{ s.1 }}</option>
                                                         <option value="m" selected>{{ s.2 }}</option>
@@ -71,7 +71,7 @@
                                                 <div class="input-group">
                                                     <label for="id_qty_{{ item.item_id }}" class="mr-3"><strong>Quantity:</strong></label>
                                                     <div class="input-group-prepend">
-                                                        <button class="decrement-qty btn btn-sm bg-black text-white rounded-0" 
+                                                        <button class="decrement-qty btn btn-sm bg-black text-white rounded" 
                                                             data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                             <span>
                                                                 <i class="fas fa-minus fa-sm"></i>
@@ -83,7 +83,7 @@
                                                         data-item_id="{{ product.id }}"
                                                         id="id_qty_{{ product.id }}">
                                                     <div class="input-group-append">
-                                                        <button class="increment-qty btn btn-sm bg-black text-white rounded-0"
+                                                        <button class="increment-qty btn btn-sm bg-black text-white rounded"
                                                             data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                             <span>
                                                                 <i class="fas fa-plus fa-sm"></i>
@@ -93,8 +93,8 @@
                                                 </div>
                                             </div>
                                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                            <input type="submit" class="btn border-black bg-black text-white rounded-0 text-uppercase" value="Add to Bag">
-                                            <a class="btn border-black remove-item rounded-0 text-danger mx-2" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                            <input type="submit" class="btn border-black bg-black text-white rounded text-uppercase" value="Add to Bag">
+                                            <a class="btn border-black remove-item rounded text-danger mx-2" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
                                             {% endwith %}
                                         </form>
                                     </td>
@@ -104,13 +104,13 @@
 
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded btn-lg">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
-                                    <a href="{% url 'checkout' %}" class="btn bg-black text-white rounded-0 btn-lg">
+                                    <a href="{% url 'checkout' %}" class="btn bg-black text-white rounded btn-lg">
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
@@ -122,7 +122,7 @@
                     </div>
                 {% else %}
                     <p class="lead mb-5">Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
@@ -132,6 +132,8 @@
             </div>
         </div>
     </div>
+    <hr/>
+</div>
 {% endblock %}
 
 {% block postloadjs %}

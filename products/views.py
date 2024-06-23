@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.core import serializers
 import json
+from decimal import Decimal
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
@@ -11,6 +12,34 @@ from django.contrib.auth.models import User
 from .forms import ProductForm, ReviewForm
 
 # Create your views here.
+def new_rating(product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.filter(product=product)
+
+    initial_rating = product.rating
+    print(initial_rating)
+    review_count = reviews.count()
+    if review_count <= 1 :
+        review_count = 2
+    reviews_sum = 0
+
+    for review in reviews:
+        old_rating = review.rating
+        reviews_sum += old_rating
+
+    new_avg_rating = (initial_rating + reviews_sum) / review_count
+
+    print(new_avg_rating, 'avg')
+
+    formatted_new_rating = '{0:.2f}'.format(new_avg_rating)
+    product.rating = Decimal(formatted_new_rating)
+    product.save()
+
+    print(product.rating)
+
+    return "Ratings updated successfully"
+
+
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
@@ -193,7 +222,11 @@ def add_review(request, product_id):
             review.user = request.user  
             review.product = product
             review.save()
+
+            new_rating(product_id)
+
             messages.success(request, f'Review for {product.name} added successfully!')
+
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to add review. Please ensure the form is valid.')
@@ -226,6 +259,11 @@ def edit_review(request, review_id):
 
         if form.is_valid():
             review = form.save()
+
+            new_rating(product.pk)
+
+            print(new_rating)
+
             messages.success(request, f'Review for {product.name} updated successfully!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
@@ -247,12 +285,15 @@ def edit_review(request, review_id):
 @login_required
 def delete_review(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
+    product = review.product
+    product_id = product.pk
 
     if not request.user == review.user:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('product_detail'))
     else:
         review.delete()
+        new_rating(product_id)
 
         messages.success(request, 'Review deleted!')
-        return redirect(reverse('product_detail'))
+        return redirect(reverse('product_detail', args=[product_id]))

@@ -6,6 +6,15 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+.bg-styled {
+    background: repeating-linear-gradient(45deg, black, transparent 100px);
+    min-height: 100vh;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: "Permanent Marker", cursive;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -25,6 +34,11 @@ body {
 
 .logo-img {
     width: 125px;
+    height: auto;
+}
+
+.footer-logo-img {
+    width: 50px;
     height: auto;
 }
 
@@ -54,6 +68,10 @@ body {
 
 .bg-black {
     background: #222 !important;
+}
+
+.list-inline-item {
+    margin-right: 0px!important;
 }
 
 .review-btn {
@@ -235,18 +253,40 @@ body {
     }
 }
 
-@media (max-width: 332px) {
+
+@media (max-width: 575px) {
 
     .header-container {
-        padding-top: 238px;
-    }
-
-    
-    .list-inline-item {
-        margin-right: 0px!important;
+        padding-top: 180px;
     }
 
     .fa-lg{
         font-size: 1rem;
     }
+
+}
+
+@media (max-width: 422px) {
+
+    .header-container {
+        padding-top: 210px;
+    }
+
+    .fa-lg{
+        font-size: 1rem;
+    }
+
+}
+
+
+@media (max-width: 332px) {
+
+    .header-container {
+        padding-top: 218px;
+    }
+
+    .fa-lg{
+        font-size: 1rem;
+    }
+
 }
