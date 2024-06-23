@@ -6,7 +6,7 @@ Guilty Sheep is a trendsetting e-commerce platform dedicated to offering unique,
 
 *Welcome to [Guilty Sheep](https://guilty-sheep-d1a7abf9637c.herokuapp.com)*
 
-![Guilty Sheep mockup](static/images/readme/guilty-sheep-mockup.png)
+![Guilty Sheep mockup]()
 
 # **Contents**
 
@@ -114,6 +114,6 @@ This website is deployed on Heroku. Follow these steps to deploy the project:
         - Heroku will fetch the code from GitHub and deploy the app using the specified packages.
         - Click "Open app" to access the live version.
 
-You can access the live link to the deployed version on Heroku - [https://guilty-sheep.herokuapp.com](https://guilty-sheep.herokuapp.com)
+You can access the live link to the deployed version on Heroku - [https://guilty-sheep-d1a7abf9637c.herokuapp.com](https://guilty-sheep-d1a7abf9637c.herokuapp.com)
 
 [Back to top](#contents)
