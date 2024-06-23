@@ -45,7 +45,7 @@
                             Spend <strong>${{ free_delivery_delta }}</strong> more to get free next day delivery!
                         </p>
                     {% endif %}
-                    <a href="{% url 'view_bag' %}" class="btn bg-black text-white btn-block rounded-0">
+                    <a href="{% url 'view_bag' %}" class="btn bg-purple text-white btn-block rounded-0">
                         <span class="text-uppercase">Go To Secure Checkout</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
@@ -56,7 +56,8 @@
         {% endif %}
 
         {% if on_wishlist_page %}
-        <p class="logo-font bg-white text-black py-1">Your Wishlist ({{ product_count }})</p>
+        {% if wishlist %}
+        <p class="logo-font bg-white text-black py-1">Your Wishlist ({{ wishlist|length }})</p>
         <div class="bag-notification-wrapper">
             {% for item in wishlist %}
                 <div class="row">
@@ -75,6 +76,17 @@
                 </div>
             {% endfor %}
         </div>
+        <div class="row">
+            <div class="col">
+                <a href="{% url 'view_wishlist' %}" class="btn bg-purple text-white btn-block rounded-0">
+                    <span class="text-uppercase">Go To Wishlist</span>
+                    <span class="icon">
+                        <i class="fas fa-heart"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+        {% endif %}
         {% endif %}
     </div>
 </div>

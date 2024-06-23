@@ -124,6 +124,8 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     data = Review.objects.filter(product=product)
     reviews_json = serializers.serialize('json', data)
+
+    on_wishlist_page = request.session.pop('from_wishlist', False)
     
     reviews = json.loads(reviews_json)
 
@@ -133,7 +135,8 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
-        'reviews' : reviews
+        'reviews' : reviews,
+        'on_wishlist_page' : on_wishlist_page
     }
 
     return render(request, 'products/product_detail.html', context)

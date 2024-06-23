@@ -12,6 +12,7 @@ def view_wishlist(request):
 def add_to_wishlist(request, item_id):
 
     product = get_object_or_404(Product, pk=item_id)
+    product_id = product.pk
     wishlist = request.session.get('wishlist', {})
 
     if item_id in list(wishlist.keys()):
@@ -22,13 +23,9 @@ def add_to_wishlist(request, item_id):
         messages.success(request, f'Added {product.name} to your wishlist')
 
     request.session['wishlist'] = wishlist
+    request.session['from_wishlist'] = True
 
-    context = {
-        'product': product,
-        'on_wishlist_page' : True,
-    }
-
-    return render(request, 'products/product_detail.html', context)
+    return redirect(reverse('product_detail', args=[product_id]))
 
 
 def add_wishlist_item_to_bag(request, item_id):

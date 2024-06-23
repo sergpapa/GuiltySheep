@@ -70,6 +70,14 @@ h1,h2,h3,h4,h5 {
     background: #222 !important;
 }
 
+.text-purple {
+    color: rebeccapurple!important;
+}
+
+.bg-purple {
+    background: rebeccapurple!important;
+}
+
 .list-inline-item {
     margin-right: 0px!important;
 }

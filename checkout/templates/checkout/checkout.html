@@ -111,14 +111,14 @@
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
 
-                    <div class="submit-button text-right mt-5 mb-2">                    
-                        <a href="{% url 'view_bag' %}" class="btn btn-outline-black rounded">
+                    <div class="submit-button text-right mt-5 mb-2">
+                        <a href="{% url 'view_bag' %}" class="btn rounded">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="font-weight-bold">Adjust Bag</span>
                         </a>
-                        <button id="submit-button" class="btn bg-black text-white rounded">
+                        <button id="submit-button" class="btn bg-purple text-white rounded">
                             <span class="font-weight-bold">Complete Order</span>
                             <span class="icon">
                                 <i class="fas fa-lock"></i>
@@ -142,8 +142,8 @@
                 </span>
             </h1>
         </div>
+        <hr/>
     </div>
-    <hr/>
 </div>
 {% endblock %}
 
