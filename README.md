@@ -150,7 +150,7 @@ The color palette chosen for the website consists of three main colors: Black, W
 
 # **Features**
 
-The CineCritic wesite is designed to be simple to navigate and easy to use. It includes a variety of features to support a profile based experience, CRUD functionality for reviews and extenral API requests to a movie database.
+The Guilty Sheep wesite is designed to be simple to navigate and easy to use.
 
 ## **Existing features**
 
@@ -271,8 +271,22 @@ The CineCritic wesite is designed to be simple to navigate and easy to use. It i
         ![Add Product](media/documentation/add_product.png)
 
 
+# **Technologies Used**
 
-
+- [Python](https://www.python.org) - backend
+- [Django](https://www.djangoproject.com) - templating framework
+- [ElephantSQL](https://www.elephantsql.com) - database
+- [HTML5](https://html.spec.whatwg.org) - content and structure of the website via templating
+- [CSS3](https://www.w3.org/Style/CSS/Overview.en.html) - styling
+- [JavaScript](https://www.w3schools.com/js/) - browser functionality
+- [Stripe](https://stripe.com/en-gr) -  online payments
+- [Wireframe.cc](https://wireframe.ccm) - wireframes
+- [GitHub](https://github.com) - hosting and storing
+- [Heroku](dashboard.heroku.com) - deployment
+- [Gitpod](https://gitpod.io/) - coding workspace
+- [GIMP](https://www.gimp.org) - image editing
+  
+[Back to top](<#contents>)
 
 
 # **Testing**
