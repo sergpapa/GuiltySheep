@@ -75,11 +75,56 @@ Guilty Sheep is a trendsetting e-commerce platform dedicated to offering unique,
 
 ## **Wireframes**
 
+The wireframes for ArtMatch were produced in [Balsamiq](https://balsamiq.com). Inclued below, frames can be found for all distinct pages (home, rules, board) in desktop, mobile and tablet view as they were initially envisioned.
+
+- Home Page
+
+    - *Laptop*
+
+    ![Laptop](media/documentation/home_page_wireframe.png)
+
+    - *Tablet*
+
+    ![Tablet](media/documentation/home_page_tablet_wireframe.png)
+
+    - *Mobile*
+    
+    ![Mobile](media/documentation/home_page_mobile_wireframe.png)
+
+- Products Page
+
+    ![Products](media/documentation/products_page_wireframe.png)
+
+- Product Details Page
+
+    ![Products](media/documentation/product_details_page_wireframe.png)
+
+- Shopping Bag Page
+
+    ![Products](media/documentation/shoppin_bag_page_wireframe.png)
+
+- Checkout Page
+
+    ![Products](media/documentation/checkout_page_wireframe.png)
+
+- Add Product Page
+
+    ![Products](media/documentation/add_product_wireframe.png)
+
+- Add Review Page
+
+    ![Products](media/documentation/add_review_wireframe.png)
+
+- Profile Page
+
+    ![Products](media/documentation/profile_page_wireframe.png)
+
+
 [Back to top](#contents)
 
 ## **Site Structure**
 
-    The project consists of 6 main apps handling everything from displaying products and their details (products app) to managing orders and handling online payments (bag and checkout app), to navigating through the user account (home and allauth), adding and managing reviews to products and adding them to a wishlist (wishlist app) for easy access in the future. 
+The project consists of 6 main apps handling everything from displaying products and their details (products app) to managing orders and handling online payments (bag and checkout app), to navigating through the user account (home and allauth), adding and managing reviews to products and adding them to a wishlist (wishlist app) for easy access in the future. 
 
 [Back to top](#contents)
 
@@ -116,7 +161,7 @@ The CineCritic wesite is designed to be simple to navigate and easy to use. It i
 
     - *Navigation Menu*
 
-        ![Navigation Menu]()
+        ![Navigation Menu](media/documentation/navbar.png)
 
 - ### **User Profiles**
 
@@ -124,11 +169,11 @@ The CineCritic wesite is designed to be simple to navigate and easy to use. It i
 
     - *login*
 
-        ![Login]()
+        ![Login](media/documentation/sign_in.png)
 
     - *Register*
 
-        ![Register]()
+        ![Register](media/documentation/sign_up.png)
     
     - *Admin User*
 
@@ -136,7 +181,7 @@ The CineCritic wesite is designed to be simple to navigate and easy to use. It i
 
         - *Admin*
 
-            ![Admin]()
+            ![Admin](media/documentation/profile_admin.png)
     
     - *Profile Page*
 
@@ -147,10 +192,6 @@ The CineCritic wesite is designed to be simple to navigate and easy to use. It i
         - *Review Details and Edit Mode*
 
             Users have the ability to access additional details and enter edit mode for each review. By clicking on a specific review entry, users are redirected to the update review page. Here, they can update their review details.
-        
-        - *Profile Page*
-
-            ![Profile Page]()
 
 
 - ### **Product Listing and Details**
@@ -159,11 +200,11 @@ The CineCritic wesite is designed to be simple to navigate and easy to use. It i
 
     - *Products Page*
 
-        ![Profile Page]()
+        ![Products Page](media/documentation/products_page.png)
         
     - *Product Details Page*
 
-        ![Product Details]()
+        ![Product Details](media/documentation/product_details.png)
 
 
 - ### **Categories and Collections**
@@ -177,7 +218,7 @@ The CineCritic wesite is designed to be simple to navigate and easy to use. It i
 
     - *Shopping Bag*
 
-        [Shopping Bag]()
+        ![Shopping Bag](media/documentation/shopping_bag.png)
 
 
 - ### **Wishlist**
@@ -186,7 +227,7 @@ The CineCritic wesite is designed to be simple to navigate and easy to use. It i
 
     - *Wishlist*
 
-        ![Wishlist]()
+        ![Wishlist](media/documentation/wishlist.png)
 
 
 - ### **Checkout Process**
@@ -195,11 +236,11 @@ The CineCritic wesite is designed to be simple to navigate and easy to use. It i
 
     - *Checkout*
 
-        ![Checkout]()
+        ![Checkout](media/documentation/checkout.png)
 
     - *Order Confirmation*
 
-        ![Order Confirmation]()
+        ![Order Confirmation](media/documentation/order_confirmation.png)
 
 
 - ### **Search and Filter**
@@ -208,7 +249,7 @@ The CineCritic wesite is designed to be simple to navigate and easy to use. It i
 
     - *Search Bar*
 
-        ![Search Bar]()
+        ![Search Bar](media/documentation/search.png)
 
 
 - ### **User Reviews**
@@ -218,7 +259,7 @@ The CineCritic wesite is designed to be simple to navigate and easy to use. It i
 
     - *Add Review*
 
-        ![Add Review]()
+        ![Add Review](media/documentation/add_review.png)
 
 
 - ### **Admin Product Management**
@@ -227,7 +268,7 @@ The CineCritic wesite is designed to be simple to navigate and easy to use. It i
 
     - *Product Management*
 
-        ![Add Review]()
+        ![Add Product](media/documentation/add_product.png)
 
 
 
