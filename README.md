@@ -6,7 +6,7 @@ Guilty Sheep is a trendsetting e-commerce platform dedicated to offering unique,
 
 *Welcome to [Guilty Sheep](https://guilty-sheep-d1a7abf9637c.herokuapp.com)*
 
-![Guilty Sheep mockup]()
+![Guilty Sheep mockup](media/documentation/guilty-sheep-mockup.png)
 
 # **Contents**
 
