@@ -27,13 +27,61 @@ The Guilty Sheep website has been tested manually as well as with automated serv
 
 ### *[w3schools HTML Validator](https://validator.w3.org)*
 
+- [Home Page](https://guilty-sheep-d1a7abf9637c.herokuapp.com)
+  
+  ![ HTML validator](media/documentation/home_page_html_validator.png)
+
+- [Products Page](https://guilty-sheep-d1a7abf9637c.herokuapp.com/products/)
+  
+  ![ HTML validator](media/documentation/products_page_html_validator.png)
+
+- [Product Details Page](https://guilty-sheep-d1a7abf9637c.herokuapp.com/products/2/)
+  
+  ![ HTML validator](media/documentation/product_details_page_html_validator.png)
+
+- [Shopping Bag Page](https://guilty-sheep-d1a7abf9637c.herokuapp.com/bag/)
+  
+  ![ HTML validator](media/documentation/shopping_bag_page_html_validator.png)
+
+- [Checkout Page](https://guilty-sheep-d1a7abf9637c.herokuapp.com/checkout/)
+  
+  ![ HTML validator](media/documentation/checkout_page_html_validator.png)
+
+- [Checkout Success Page](https://guilty-sheep-d1a7abf9637c.herokuapp.com/checkout/checkout_success/433D177B9E6B4ECF8D073990C3F1FF43)
+  
+  ![ HTML validator](media/documentation/checkout_success_page_html_validator.png)
+
+- [Wishlist Page](https://guilty-sheep-d1a7abf9637c.herokuapp.com/wishlist/)
+  
+  ![ HTML validator](media/documentation/wishlist_page_html_validator.png)
+
+- [Add Product Page](https://guilty-sheep-d1a7abf9637c.herokuapp.com/products/add/)
+  
+  ![ HTML validator](media/documentation/add_product_page_html_validator.png)
+
+- [Edit Product Page](https://guilty-sheep-d1a7abf9637c.herokuapp.com/products/edit/29/)
+  
+  ![ HTML validator](media/documentation/edit_product_page_html_validator.png)
+
+- [Add Review Page](https://guilty-sheep-d1a7abf9637c.herokuapp.com/products/review/add/25/)
+  
+  ![ HTML validator](media/documentation/add_review_page_html_validator.png)
+
+- [Edit Review Page](https://guilty-sheep-d1a7abf9637c.herokuapp.com/products/review/edit/1/)
+  
+  ![ HTML validator](media/documentation/edit_review_page_html_validator.png)
+
+- [Profile Page](https://guilty-sheep-d1a7abf9637c.herokuapp.com/profile/)
+  
+  ![ HTML validator](media/documentation/profile_page_html_validator.png)
+
 ### *[w3schools CSS Validator](https://jigsaw.w3.org/css-validator/)*
 
-![css-validator]()
+![css-validator](media/documentation/css_validator.png)
 
 ### *[JsHint JavasScript Validator](https://jshint.com)*
 
-![js-validator]()
+![js-validator](media/documentation/js_hint.png)
 
 [Back to top](#contents)
 
@@ -141,7 +189,69 @@ The Guilty Sheep website has been tested manually as well as with automated serv
         Expected: Admin users should be able to manage user reviews to maintain a positive user experience.
         Testing: Accessed the admin review management interface to moderate reviews.
         Result: Reviews were successfully managed with options to approve, edit, or delete as needed
+
+
+
+
+
+
+
+
+
+
+- ## Perofrmance 
+
+    |         |**Movie List**|**Movie Card**| **Profile Page**| **Profile Page**| **Add Movie** |
+    |---------|-------------|----------------------|------------|------------|------------|
+    |  Buttons |   Pass      |       Pass           |  Pass      |   Pass      |    Pass      |
+    |  Links  |   Pass      |       Pass           |  Pass      |  Pass      |   Pass      |
+    |  Images  |   Pass      |       Pass           |  Pass      |  Pass      |   Pass      |
+    |  Nav Links | Pass  | Pass | Pass |  Pass      |   Pass      |
+    |  CREATE review | Pass  | Pass | Pass |  Pass      |   Pass      |
+    |  READ review | Pass  | Pass | Pass |  Pass      |   Pass      |
+    |  UPDATE review | Pass  | Pass | Pass |  Pass      |   Pass      |
+    |  DELETE review | Pass  | Pass | Pass |  Pass      |   Pass      |
+    |  API calls | Pass  | Pass | Pass |  Pass      |   Pass      |
+
+## **Responsiveness Test**
+
+Responsiveness tests were carried out manually with a combination of device testing and [Google Chrome Developer Tools](https://developer.chrome.com/docs/devtools/).
     
 
+|         |**iPhone 11**|**Samsung Galaxy S8+**| **Pixel 5**|**iPad Mini**|**iPad Air**|**iPad Pro**|**Display <1200px**|**Display >1200px**|
+|---------|-------------|----------------------|------------|-------------|------------|------------|-------------------|-------------------|
+|  Render |   Pass      |       Pass           |  Pass      |    Pass     |   Pass     |  Pass      | Pass              |      Pass         |
+|  Images |   Pass      |       Pass           |  Pass      |    Pass     |   Pass     |  Pass      | Pass              |      Pass         |
+|  Links  |   Pass      |       Pass           |  Pass      |    Pass     |   Pass     |  Pass      | Pass              |      Pass         |
 
 
+[Back to top](#contents)
+
+## **Browser Compatibility**
+
+Guilty Sheep has been tested in multiple browsers with no visible issues. Google Chrome, Mozilla Firefox, Safari, Microsoft Edge and Opera.Appearance, functionality and responsiveness were found consistent throughout on a range of device sizes and browsers.
+
+[Back to top](#contents)
+
+# **Testing User Stories**
+
+[Back to top](#contents)
+
+## **Known Bugs**
+
+### **Resolved**
+
+### **Lighthouse**
+
+The website has been tested using [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) to test individual pages on:
+
+- Performance - how does the page perform on loading?
+- Accessibility - is the website accessible to all users?
+- Best Practices - Does the code follow best practices?
+- SEO - Is the pages optimized for search engines?
+
+  Results varied depending on browser, but wesite maintained an over 80% score on all browsers and all pages. An example of the Lighthouse results on Opera Browser at the Guilty Sheep movie card page is shown below:
+
+  ![Lighthouse-home-page]()
+
+Back to [README.md](./README.md#testing).

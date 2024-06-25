@@ -131,7 +131,7 @@
                 {% endif %}
             </div>
         </div>
-        <hr/>
+        <hr>
     </div>
 </div>
 {% endblock %}
@@ -139,7 +139,7 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
-<script type="text/javascript">
+<script>
     function updateHiddenInput() {
         var selectedSize = document.getElementById('id_product_size').value;
         document.getElementById('product_size_hidden').value = selectedSize;
