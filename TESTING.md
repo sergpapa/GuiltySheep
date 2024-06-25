@@ -401,6 +401,17 @@ Guilty Sheep has been tested in multiple browsers with no visible issues. Google
 
 ### **Resolved**
 
+- *Django Wrong Default Value - Migrate*
+
+    Sometimes when making changes to models and try to migrate you get a prompt to enter a default value to be applied to pre-existing db items even if you have deleted them through the admin platform. This is likely cause due to initial mogrations having differnet configurations the bd tables.
+    if in this case a wrong value is entered it can still be accepted by Django (such as timezone.now() to a non date field). This causes the admin table to break and the user is unable to access it.
+
+    *Solution:*
+
+    The only solution that was identified was to scratch the db and recreated as access to the db was impossible as well as deleting the object from the shell (since previous objects have already been deleted)
+
+    Another possible solution could be to delete all previous migrations and fake init new migrations. With this command django diregards any previous migrations and starts building your db presummable fixing the issue.
+
 ### **Lighthouse**
 
 The website has been tested using [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) to test individual pages on:
