@@ -1,3 +1,4 @@
+# Contains Code Institute Provided Code
 from django.shortcuts import render
 from products.models import Collection
 

@@ -1,3 +1,5 @@
+# Contains Code Institute Provided Code
+
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.core import serializers
 import json
