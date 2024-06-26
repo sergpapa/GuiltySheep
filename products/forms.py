@@ -27,6 +27,8 @@ class ReviewForm(forms.ModelForm):
         model = Review
         fields = '__all__'
         exclude = ['review_date', 'user', 'product']
+    
+    review_body = forms.CharField(widget=forms.Textarea)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
