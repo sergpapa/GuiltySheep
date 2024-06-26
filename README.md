@@ -75,7 +75,7 @@ Guilty Sheep is a trendsetting e-commerce platform dedicated to offering unique,
 
 ## **Wireframes**
 
-The wireframes for ArtMatch were produced in [Balsamiq](https://balsamiq.com). Inclued below, frames can be found for all distinct pages (home, rules, board) in desktop, mobile and tablet view as they were initially envisioned.
+The wireframes for Guilty Sheep were produced in [Wireframe.cc](https://wireframe.cc). Inclued below, frames can be found for all distinct pages (home, rules, board) in desktop, mobile and tablet view as they were initially envisioned.
 
 - Home Page
 
@@ -291,7 +291,7 @@ The Guilty Sheep wesite is designed to be simple to navigate and easy to use.
 
 # **Testing**
 
-Please follow this [link](./TESTING.md) to learn more about testing CineCritic.
+Please follow this [link](./TESTING.md) to learn more about testing Guilty Sheep.
 
 [Back to top](<#contents>)
 
