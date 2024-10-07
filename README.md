@@ -16,6 +16,7 @@ Guilty Sheep is a trendsetting e-commerce platform dedicated to offering unique,
 - [**User Experience (UX)**](#user-experience-ux)
     - [**User Stories**](#user-stories)
     - [**Wireframes**](#wireframes)
+    - [**ER Diagram**](#er-diagram)
     - [**Site Structure**](#site-structure)
   - [**Design**](#design)
 - [**Features**](#features)
@@ -119,6 +120,12 @@ The wireframes for Guilty Sheep were produced in [Wireframe.cc](https://wirefram
 
     ![Products](media/documentation/profile_page_wireframe.png)
 
+
+[Back to top](#contents)
+
+## **ER Diagram**
+
+![ERD](media/documentation/erd.png)
 
 [Back to top](#contents)
 
