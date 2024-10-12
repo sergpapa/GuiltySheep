@@ -1,11 +1,8 @@
 # Contains Code Institute Provided Code
 import os
 import dj_database_url
-from dotenv import load_dotenv
 if os.path.exists("env.py"):
   import env
-
-load_dotenv()
 
 from pathlib import Path
 
