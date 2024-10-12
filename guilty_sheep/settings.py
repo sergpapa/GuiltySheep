@@ -1,8 +1,11 @@
 # Contains Code Institute Provided Code
 import os
 import dj_database_url
+from dotenv import load_dotenv
 if os.path.exists("env.py"):
-  import env 
+  import env
+
+load_dotenv()
 
 from pathlib import Path
 
@@ -52,7 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "allauth.account.middleware.AccountMiddleware",
+    # "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = 'guilty_sheep.urls'
